@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VocFilm - Review Film</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Voc</div> <div class="logo1">Film</div>
+            <ul>
+                <li><a href="#">Beranda</a></li>
+                <li><a href="#">Daftar Tonton</a></li>
+                <li><a href="#">Populer</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <button class="login-btn">Masuk</button>
+                <button class="signup-btn">Daftar</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="welcome">
+            <h1>SELAMAT DATANG</h1>
+            <p>Jelajahi & Review Film Favoritmu</p>
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Cari film di sini..." oninput="cariFilm()">
+                <button class="search-btn">Cari</button>
+            </div>
+        </section>
+
+        <section id="movie-list">
+            <h2>Trending</h2>
+            <div class="movies" id="trending-movies">
+                <!-- Film trending akan dimuat di sini -->
+            </div>
+
+            <h2>Terbaru</h2>
+            <div class="movies" id="latest-movies">
+                <!-- Film terbaru akan dimuat di sini -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; M. Putra Pamungkas</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

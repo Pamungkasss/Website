@@ -1,0 +1,305 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #1c1c2e;
+    color: #eaeaea; 
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #2c2c3e; 
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.logo {
+    color: #ffd700;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.logo1 {
+    color: white;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin-left: 50px;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #eaeaea;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffd700; 
+}
+
+/* Tombol */
+.auth-buttons {
+    margin-left: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.login-btn, .signup-btn {
+    margin-left: 10px;
+    padding: 10px 20px;
+    background-color: #ffd700; 
+    border: none;
+    cursor: pointer;
+    border-radius: 30px;
+    font-size: 14px;
+    transition: background-color 0.3s, transform 0.3s;
+    color: #1c1c2e;
+}
+
+.login-btn:hover, .signup-btn:hover {
+    background-color: #e5b800;
+    transform: scale(1.05);
+}
+
+/* Main content */
+main {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #2c2c3e;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.welcome {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.welcome h1 {
+    font-size: 48px;
+    color: #ffd700;
+}
+
+.welcome p {
+    font-size: 20px;
+    margin: 20px 0;
+    color: #eaeaea;
+}
+
+/* Search Bar */
+.search-container {
+    display: inline-flex;
+    justify-content: center;
+    width: 100%;
+}
+
+input[type="text"] {
+    width: 50%;
+    padding: 15px;
+    font-size: 18px;
+    border: none;
+    border-radius: 30px 0 0 30px;
+    background-color: #34344a;
+    color: #eaeaea;
+    outline: none;
+    transition: background-color 0.3s;
+}
+
+input[type="text"]::placeholder {
+    color: #a4b0be;
+}
+
+input[type="text"]:focus {
+    background-color: #464662;
+}
+
+.search-btn {
+    padding: 15px 25px;
+    background-color: #ffd700;
+    border: none;
+    border-radius: 0 30px 30px 0;
+    cursor: pointer;
+    color: #1c1c2e;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+.search-btn:hover {
+    background-color: #e5b800;
+}
+
+/* Movie List */
+section#movie-list {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    text-align: center;
+}
+
+.movies {
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    scroll-behavior: smooth;
+}
+
+.movie-item {
+    width: 160px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.movie-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.movie-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+.movie-item p {
+    margin-top: 10px;
+    color: #cfcfcf;
+    font-size: 16px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #2c2c3e;
+    color: #eaeaea;
+    margin-top: 50px;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Responsif di HP --- */
+@media (max-width: 780px) {
+    header {
+        flex-direction: column;
+        padding: 10px;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .auth-buttons {
+        margin-left: 0;
+        margin-top: 10px;
+        justify-content: center;
+    }
+
+    .login-btn, .signup-btn {
+        margin: 5px;
+        padding: 10px;
+        width: 120px;
+        text-align: center;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    .welcome h1 {
+        font-size: 32px;
+    }
+
+    .welcome p {
+        font-size: 16px;
+    }
+
+    input[type="text"] {
+        width: 100%;
+    }
+
+    .movies {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .movie-item {
+        width: 120px;
+    }
+
+    footer {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .welcome h1 {
+        font-size: 24px;
+    }
+
+    .welcome p {
+        font-size: 14px;
+    }
+
+    .login-btn, .signup-btn {
+        padding: 6px 10px;
+        font-size: 12px;
+        width: 100px;
+    }
+
+    .movie-item {
+        width: 100px;
+    }
+
+    header {
+        padding: 15px;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    .auth-buttons {
+        flex-direction: column;
+    }
+}
